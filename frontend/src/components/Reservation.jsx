@@ -12,6 +12,10 @@ const Reservation = () => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [phone, setPhone] = useState("");
+  const [numberOfGuests, setNumberOfGuests] = useState(1);
+  const [occasion, setOccasion] = useState("");
+  const [specialRequests, setSpecialRequests] = useState("");
+  const [preferredSeating, setPreferredSeating] = useState("");
   const navigate = useNavigate();
 
   const handleReservation = async (e) => {
@@ -19,7 +23,18 @@ const Reservation = () => {
     try {
       const { data } = await axios.post(
         "http://localhost:4000/api/v1/reservation/send",
-        { firstName, lastName, email, phone, date, time },
+        {
+          firstName,
+          lastName,
+          email,
+          phone,
+          date,
+          time,
+          numberOfGuests,
+          occasion,
+          specialRequests,
+          preferredSeating,
+        },
         {
           headers: {
             "Content-Type": "application/json",
@@ -34,6 +49,10 @@ const Reservation = () => {
       setEmail("");
       setTime("");
       setDate("");
+      setNumberOfGuests(1);
+      setOccasion("");
+      setSpecialRequests("");
+      setPreferredSeating("");
       navigate("/success");
     } catch (error) {
       toast.error(error.response.data.message);
@@ -92,6 +111,40 @@ const Reservation = () => {
                   placeholder="Phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
+                />
+              </div>
+              <div>
+                <input
+                  type="number"
+                  placeholder="Number of Guests"
+                  min={1}
+                  max={20}
+                  value={numberOfGuests}
+                  onChange={(e) => setNumberOfGuests(Number(e.target.value))}
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Occasion (Optional)"
+                  value={occasion}
+                  onChange={(e) => setOccasion(e.target.value)}
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Special Requests (Optional)"
+                  value={specialRequests}
+                  onChange={(e) => setSpecialRequests(e.target.value)}
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Preferred Seating (Optional)"
+                  value={preferredSeating}
+                  onChange={(e) => setPreferredSeating(e.target.value)}
                 />
               </div>
               <button type="submit" onClick={handleReservation}>

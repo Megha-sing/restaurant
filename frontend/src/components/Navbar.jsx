@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { data } from "../restApi.json";
 import { Link } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
   const [show, setShow] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
       <nav>
@@ -12,19 +15,21 @@ const Navbar = () => {
         <div className="logo">Foody Fresh Company</div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
-            {data[0].navbarLinks.map((element) => (
-              <Link
-                to={element.link}
-                spy={true}
-                smooth={true}
-                duration={500}
-                key={element.id}
-              >
-                {element.title}
-              </Link>
-            ))}
+            {data[0].navbarLinks
+              .filter((element) => element.title !== "HOME")
+              .map((element) => (
+                <Link
+                  to={element.link}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  key={element.id}
+                >
+                  {element.title}
+                </Link>
+              ))}
           </div>
-          <button className="menuBtn">OUR MENU</button>
+          <button className="menuBtn" onClick={() => navigate("/menu")}>OUR MENU</button>
         </div>
         <div className="hamburger" onClick={()=> setShow(!show)}>
                 <GiHamburgerMenu/>
