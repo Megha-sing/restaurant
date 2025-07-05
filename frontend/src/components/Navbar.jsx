@@ -10,9 +10,10 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        {/* <img className="logo" src="logo.svg" alt="logo" /> */}
+        {
+         <img className="logo" src="logo (2).png" alt="logo" /> }
         
-        <div className="logo">Foody Fresh Company</div>
+        
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
             {data[0].navbarLinks
@@ -28,8 +29,16 @@ const Navbar = () => {
                   {element.title}
                 </Link>
               ))}
+            <Link
+              to="reviews-section"
+              spy={true}
+              smooth={true}
+              duration={500}
+              key="reviews"
+            >
+              REVIEWS
+            </Link>
           </div>
-          <button className="menuBtn" onClick={() => navigate("/menu")}>OUR MENU</button>
         </div>
         <div className="hamburger" onClick={()=> setShow(!show)}>
                 <GiHamburgerMenu/>

@@ -22,10 +22,10 @@ const Success = () => {
     <>
       <section className="notFound">
         <div className="container">
-          <img src="/sandwich.png" alt="success" />
-          <h1>Redirecting to Home in {countdown} seconds...</h1>
+          <img src="/sandwich.png" alt="success" style={{ width: 300, height: 'auto', marginBottom: 16 }} />
+          <h1>Redirecting to home in {countdown} seconds...</h1>
           <Link to={"/"}>
-            Back to Home <HiOutlineArrowNarrowRight />
+            Back to Home
           </Link>
         </div>
       </section>

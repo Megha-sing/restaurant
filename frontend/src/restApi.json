@@ -5,19 +5,19 @@
                 "id": 1,
                 "image": "./quality_food.svg",
                 "title": "QUALITY FOOD",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus officia qui repellat." 
+                "description": "  We believe in serving only the best. Our dishes are made with high-quality, fresh ingredients to deliver rich flavors and unforgettable taste in every bite." 
             },
             {
                 "id": 2,
                 "image": "./super_taste.svg",
                 "title": "SUPER TASTE",
-                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing sit amet elit. Sit voluptates quaerat pariatur." 
+                "description": "Each recipe at Fork & Flame is crafted to perfection, bringing out bold and balanced flavors that keep you coming back for more." 
             },
             {
                 "id": 3,
                 "image": "./fast_delivery.svg",
                 "title": "FAST DELIVERY",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus officia qui repellat." 
+                "description": "  Hot, fresh, and on time — we ensure your food reaches you fast, without compromising on taste or quality." 
             }
         ],
         "dishes": [
@@ -99,22 +99,22 @@
         "testimonials": [
             {
                 "id": 1,
-                "image": "./review1.png",
-                "description": "Morbi nulla nec dui lacus, in. Libero in pretium metus massa. Sodales dignissim vitae mauris varius faucibus. Eleifend dui, non laoreet ac luctus facilisis diam. Enim scelerisque vel at id viverra tellus.",
+                "image": "./review_1.png",
+                "description": "Absolutely loved the ambiance and the food! The grilled chicken was cooked to perfection and the mocktail was refreshing. Will definitely come back with friends.",
                 "rating": 4,
                 "userName": "Jane Cooper"
             },
             {
                 "id": 2,
-                "image": "./review2.png",
-                "description": "Tortor vel nunc netus pharetra enim, enim dolor mauris in. Sit nam fringilla in egestas. Libero condimentum quis in vulputate adipiscing venenatis augue. Venenatis faucibus.",
+                "image": "./review_2.png",
+                "description": "Fork & Flame truly lives up to its name. The flavors were bold and unique — especially the pasta primavera! Plus, the staff was incredibly friendly and attentive.",
                 "rating": 4.5,
                 "userName": "Esther Howard"
             },
             {
                 "id": 3,
-                "image": "./review3.png",
-                "description": "Tortor vel nunc netus pharetra enim, enim dolor mauris in. Sit nam fringilla in egestas. Libero condimentum quis in vulputate adipiscing venenatis augue. Venenatis faucibus.",
+                "image": "./review_3.png",
+                "description": "Hands down one of the best dining experiences I've had in a while. Every dish was full of flavor and beautifully presented. Highly recommend the molten chocolate cake!",
                 "rating": 5,
                 "userName": "Guy Hawkins"
             }

@@ -7,9 +7,8 @@ const Team = () => {
         <div className="heading_section">
           <h1 className="heading">OUR TEAM</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            fugit dicta, ipsum impedit quam laboriosam quas doloremque quia
-            perferendis laborum.
+            Our team is the heart of everything we do. From our passionate chefs who bring bold flavors to life, to our warm and attentive staff who make every guest feel at home — we work together to create a dining experience you’ll remember.
+
           </p>
         </div>
         <div className="team_container">

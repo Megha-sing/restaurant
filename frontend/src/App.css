@@ -1,3 +1,73 @@
+/* OUR MENU PAGE STYLING */
+  .menu-page {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5fcbc;
+    padding: 50px 20px;
+}
+.menu-page .container {
+  max-width: 900px;
+  min-width: 350px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 2px 24px #0001;
+  padding: 40px 32px;
+  margin: 0 auto;
+}
+.menu-page h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #E36925;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.menu-page p {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.menu-category {
+  margin-bottom: 32px;
+}
+.menu-category h2 {
+  font-size: 1.5rem;
+  color: #E36925;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 4px;
+}
+.menu-category ul {
+  list-style: none;
+  padding: 0;
+}
+.menu-category li {
+  margin-bottom: 18px;
+  padding: 12px 0;
+  border-bottom: 1px dashed #e0e0e0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+.menu-category li:last-child {
+  border-bottom: none;
+}
+.menu-category strong {
+  font-weight: 600;
+  color: #111;
+}
+.menu-category p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  text-align: right;
+  flex: 1;
+  max-width: 60%;
+}
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap");
 
 * {
@@ -17,8 +87,9 @@ nav {
   display: flex;
   max-width: 1500px;
   min-width: 1500px;
-  padding: 25px 10px 40px 10px;
-  margin-bottom: 25px;
+  height: 100px; 
+  padding: 0 10px;
+  margin-bottom: 26px;
   justify-content: space-between;
   position: relative;
   align-items: center;
@@ -39,14 +110,21 @@ nav .logo {
   display: flex;
   align-items: center;
   font-size: 2rem;
+  margin-right: 40px; /* Add space between logo and nav links */
 }
 nav .navLinks {
   flex: 2;
-}
-nav .navLinks {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* Push nav links/buttons to the right */
   align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+nav .navLinks .links {
+  display: flex;
+  gap: 25px;
+  flex: 1;
+  justify-content: space-evenly; /* Spread links evenly */
 }
 nav .navLinks .links {
   display: flex;
@@ -64,19 +142,21 @@ nav .navLinks .links a:hover {
   transition: 0.3s;
   cursor: pointer;
 }
-nav .menuBtn {
+/* General button style for all buttons */
+button, .menuBtn, .reservation .container .banner .reservation_form_box form button, .notFound .container a, .about .container .banner a, .menu .container .dishes_container .card button {
   padding: 8px 20px;
-  color: black;
-  background: transparent;
+  color: #111;
+  background: #fff;
   border: 1px solid #333;
   border-radius: 20px;
   font-size: 16px;
-}
-nav .menuBtn:hover {
-  color: #fff;
-  background: #222;
   transition: 0.3s;
   cursor: pointer;
+}
+button:hover, .menuBtn:hover, .reservation .container .banner .reservation_form_box form button:hover, .notFound .container a:hover, .about .container .banner a:hover, .menu .container .dishes_container .card button:hover {
+  color: #fff;
+  background: #222;
+  border: 1px solid #222;
 }
 nav .hamburger {
   display: none;
@@ -137,7 +217,7 @@ nav svg {
     text-align: center;
   }
   nav .menuBtn {
-    margin-top: 20px;
+    margin-top: 220px;
   }
 }
 @media (max-width: 800px) {
@@ -247,6 +327,7 @@ nav svg {
 
   .heroText {
     width: 100%;
+    align-items: center;
   }
 
   .heroLogo {
@@ -341,7 +422,7 @@ nav svg {
 .heading {
   font-weight: 200;
   font-size: 4rem;
-  color: #111;
+  color: #E36925;
 }
 .about .container .banner .mid {
   width: 65%;
@@ -799,10 +880,10 @@ footer .container .banner:first-child::after {
   background: #111;
 }
 footer .container .banner:first-child .left {
-  font-size: 1.75rem;
+  font-size: 1.1rem;
 }
 footer .container .banner:last-child .left {
-  font-size: 18px;
+  font-size: 14px;
   color: #333;
 }
 footer .container .banner:last-child .left a {
@@ -815,7 +896,7 @@ footer .container .banner:last-child .left a:hover {
 }
 footer .container .banner .right {
   text-align: end;
-  font-size: 18px;
+  font-size: 14px;
   color: #333;
 }
 @media (max-width: 1520px) {
