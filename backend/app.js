@@ -19,6 +19,9 @@ app.use(
 
 app.use(express.json()); //convert string to json
 app.use(express.urlencoded({ extended: true }));
+app.get('/', (req, res) => {
+  res.send('Backend is running');
+});
 app.use("/api/v1/reservation", reservationRouter);
 
 dbConnection();
