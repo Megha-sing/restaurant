@@ -10,19 +10,11 @@ const app = express();
 dotenv.config({ path: "./config/config.env" });
 
 const allowedOrigins = [process.env.FRONTEND_URL, "http://localhost:5173"];
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: 'https://restaurant-fd.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true // if you use cookies or HTTP authentication
+}));
 //app.use(cors()); 
 
 app.use(express.json()); //convert string to json
