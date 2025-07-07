@@ -22,7 +22,7 @@ const Reservation = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/reservation/send",
+        "http://restaurant-5siv.onrender.com/api/v1/reservation/send",
         {
           firstName,
           lastName,
