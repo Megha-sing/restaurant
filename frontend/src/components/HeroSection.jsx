@@ -26,18 +26,7 @@ const HeroSection = () => {
           bottom: 0,
           zIndex: 2
         }}>
-          <h4 style={{
-            textAlign: 'center',
-            fontSize: '1rem',
-            fontWeight: '500',
-            color: 'black',
-            margin: 0,
-            marginBottom: '64px',
-            padding: '8px 24px',
-            maxWidth: '90%'
-          }}>
-            Igniting Flavours. One dish at a time.
-          </h4>
+        
           <button
             className="menuBtn"
             style={{ marginTop: '0', padding: '14px 36px', fontSize: '1rem' }}
