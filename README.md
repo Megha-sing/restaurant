@@ -6,11 +6,12 @@ A responsive web application for booking restaurant tables with a simple, intuit
 - Select date, time, and number of guests
 - Mobile-friendly responsive UI
 - Smooth navigation and clean design
+- Automated email confirmations using Nodemailer upon successful reservations.
 
 ## 🛠 Tech Stack
 **Frontend:** React.js, CSS  
-**Backend:** Node.js, Express.js (if applicable)  
-**Database:** MongoDB (if applicable)
+**Backend:** Node.js, Express.js 
+**Database:** MongoDB 
 
 ## 📷 Screenshots
 <img width="1919" height="1003" alt="image" src="https://github.com/user-attachments/assets/e55ca18e-be07-40ef-95c0-613563006106" />
